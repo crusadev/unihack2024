@@ -10,6 +10,7 @@ import RegisterForm from './components/register-form';
 import MainScreen from './pages/main-screen';
 import ProtectedRoutes from './components/protected-routes';
 import ChatScreen from './pages/chat';
+import CloudScreen from './pages/cloud';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
               {
                 path:"/home/chat",
                 element:<ChatScreen />
+              },
+              {
+                path:"/home/cloud",
+                element:<CloudScreen />
               }
             ]
           }
