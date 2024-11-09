@@ -1,0 +1,52 @@
+.register-label{
+    width:100%;
+    padding:6px;
+    color:white;
+    font-size: 12px;
+}
+.name-container{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    flex-grow: 1;
+    gap:12px;
+}
+.name-icon{
+    top:32px;
+}
+.register-input{
+    width:100%;
+    border:1px solid white;
+    color:white;
+    padding:16px 48px;
+    border-radius:24px;
+    background-color: rgb(128, 128, 128,.3);
+}
+.register-input::placeholder{
+    color:white
+}
+.register-title{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    color:white;
+    padding:0px 32px;
+}
+.submit-register-button{
+    background-color: #afafaf;
+    color:rgb(34,34,34);
+    padding:12px 48px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.submit-register-button:hover{
+    background-color: #d3d3d3
+}
+.register-existing{
+    color:white;
+    width:100%;
+    text-align: center;
+    margin:12px 0px;
+}

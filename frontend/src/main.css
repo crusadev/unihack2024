@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(34,34,34);
+    margin:0;
+}
+*{
+    font-family: mmpt;
+    font-weight: 200;
+}
+@font-face {
+    font-family: mmpt;
+    src: url("./assets/fonts/MMPT-SR.otf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: mmpt;
+    src: url("./assets/fonts/MMPT-M.otf");
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: mmpt;
+    src: url("./assets/fonts/MMPT-L.otf");
+    font-weight: 200;
+  }
