@@ -11,6 +11,10 @@ import MainScreen from './pages/main-screen';
 import ProtectedRoutes from './components/protected-routes';
 import ChatScreen from './pages/chat';
 import CloudScreen from './pages/cloud';
+import Profile from './pages/profile';
+import ConvProvider from './react-logic/context/conversationContext';
+import ChatsList from './pages/chat-list';
+import MessagesProvider from './react-logic/context/messagesContext';
 
 const router = createBrowserRouter([
   {
@@ -40,12 +44,20 @@ const router = createBrowserRouter([
             element:<MainScreen />,
             children:[
               {
-                path:"/home/chat",
+                path:"/home/chatlist",
+                element:<ChatsList />
+              },
+              {
+                path:"/home/chat/:conversation_id",
                 element:<ChatScreen />
               },
               {
                 path:"/home/cloud",
                 element:<CloudScreen />
+              },
+              {
+                path:"/home/profile",
+                element:<Profile />
               }
             ]
           }
@@ -59,7 +71,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ConvProvider>
+        <MessagesProvider>
+          <RouterProvider router={router} />
+        </MessagesProvider>
+      </ConvProvider>
     </AuthProvider>
   </React.StrictMode>
 );

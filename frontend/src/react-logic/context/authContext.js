@@ -6,16 +6,16 @@ export const AuthContext = createContext();
 const AuthProvider = ({children}) => {
     const [token,setToken] = useState(localStorage.getItem("token"));
     const [user,setUser] = useState(JSON.parse(localStorage.getItem("user")));
-useEffect(() => {
-    if(token){
-        axios.defaults.headers.common["Authorization"] = token;
-        localStorage.setItem("token",token);
-        localStorage.setItem("user",JSON.stringify(user));
-    }else{
-        axios.defaults.headers.common["Authorization"] = null;
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-    }
+    useEffect(() => {
+        if(token){
+            axios.defaults.headers.common["Authorization"] = token;
+            localStorage.setItem("token",token);
+            localStorage.setItem("user",JSON.stringify(user));
+        }else{
+            axios.defaults.headers.common["Authorization"] = null;
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+        }
 },[token,user])
 
 const tokenState = useMemo(

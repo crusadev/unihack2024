@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const usersRoute = require("./users/routes");
+const usersRouter = require("./users/routes");
+const conversationsRouter = require("./messages/routes")
 const app = express();
 
 app.use(cors());
@@ -14,4 +15,5 @@ app.listen(process.env.PORT,() => {
     })
 })
 
-app.use("/users",usersRoute)
+app.use("/users",usersRouter);
+app.use("/conversations",conversationsRouter)

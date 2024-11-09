@@ -1,0 +1,15 @@
+.pagination-container{
+    width:100%;
+    display:flex;
+    gap:12px;
+}
+.pagination-button{
+    padding:12px;
+    border-radius: 6px;
+    border:1px solid white;
+}
+.curent-page{
+    background-color: white;
+    border:1px solid white;
+    color:rgb(34,34,34)
+}

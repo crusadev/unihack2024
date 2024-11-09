@@ -31,6 +31,7 @@ const registerUser = async (req,res) => {
             email:savedUser.email,
             last_name:savedUser.last_name,
             first_name:savedUser.first_name,
+            cnp:savedUser.cnp
         }
         const token = jwt.sign({
             id:savedUser._id,
@@ -64,6 +65,7 @@ const loginUser = async (req,res) => {
             email:foundUser.email,
             last_name:foundUser.last_name,
             first_name:foundUser.first_name,
+            cnp:foundUser.cnp
         }
         const token = jwt.sign({
             id:foundUser._id,

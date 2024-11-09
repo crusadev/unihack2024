@@ -1,0 +1,46 @@
+.prompt-container{
+    box-sizing: border-box;
+    margin:12px 24px;
+    padding:12px 24px;
+    display:flex;
+    background-color: #2f2f2f;
+    border:none;
+    border-radius: 24px;
+    align-items: center;
+    margin-bottom:18px;
+}
+.file-icon{
+    color:#b4b4b4;
+    margin-right:18px;
+    cursor:pointer;
+    font-size: 18px;
+    transition: all .5s;
+}
+.file-icon:hover{
+    color:rgb(255,255,255)
+}
+.prompt-input{
+    flex-grow:1;
+    background-color: transparent;
+    border:none;
+    color:white;
+}
+.prompt-input:focus{
+    border:none;
+    outline: none;
+}
+.prompt-input::placeholder{
+    color:#b4b4b4;
+}
+.send-prompt{
+    color:#171717;
+    border-radius: 200%;
+    padding:10px;
+    background-color: white;
+    aspect-ratio: 1/1;
+    cursor:pointer;
+    transition:all .5s;
+}
+.send-prompt:hover{
+    transform: translateY(-15%);
+}

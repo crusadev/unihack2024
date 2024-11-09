@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
     const links = [
         {
-            path:"/home/chat",
+            path:"/home/chatlist",
             display:"Chat",
             image:Prompt
         },
@@ -31,8 +31,8 @@ const Navbar = () => {
             <div className="navbar-logo-title">AADMP TIMISOARA</div>
         </div>
         <div className="navbar-links-container">
-            {links.map((link) => (
-                <Link to={link.path} className="navbar-button">
+            {links.map((link,index) => (
+                <Link to={link.path} className="navbar-button" key={index}>
                     <img src={link.image} className="navbar-image" />
                     <div className="empty"></div>
                     <div className="navbar-display">{link.display}</div>

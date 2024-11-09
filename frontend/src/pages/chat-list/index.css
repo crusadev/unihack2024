@@ -1,0 +1,75 @@
+.acess-chat-headers-container{
+    width:100%;
+    display:flex;
+    background-color: #141414;
+    padding:8px 24px;
+}
+.access-chat-date,.access-chat-hour,.access-chat-header-date,.access-chat-header-hour{
+    width:15%;
+}
+.access-chat-header{
+    color:white;
+    text-align: center;
+}
+.access-chat-header-message{
+    width:50%;
+}
+.access-chat-last-message{
+    width:50%;
+}
+.access-chat-data{
+    text-align: center;
+}
+.access-chat-container{
+    width:100%;
+    padding:128px 64px;
+    box-sizing: border-box;
+}
+.access-chat-button{
+    padding:8px 24px;
+    color:white;
+    text-decoration: none;
+    display:flex;
+    transition: all .5s;
+    align-items: center;
+    width:100%;
+}
+.access-chat-button:nth-child(odd){
+    background-color: #141414;
+}
+.access-chat-button:nth-child(even){
+    background-color: #242424;
+}
+.access-chat-go{
+    background-color: white;
+    border-radius: 100%;
+    padding:12px;
+    color:#212121;
+    transition: all .5s;
+}
+.access-chat-button:hover .access-chat-go{
+    transform: translateX(25%);
+}
+.empty{
+    flex-grow: 1;
+}
+.access-chat-add{
+    background-color: white;
+    width:100%;
+    text-align: center;
+    padding: 8px 24px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:#212121
+}
+.add-plus{
+    font-size: 24px;
+    padding-left:4px;
+    transition:all .5s;
+}
+.access-chat-add:hover .add-plus{
+    padding-left:12px;
+}

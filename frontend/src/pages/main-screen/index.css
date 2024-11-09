@@ -17,3 +17,11 @@
 .main-show-container{
     flex-grow: 1;
 }
+.screen-header{
+    width:100%;
+    box-sizing: border-box;
+    color:white;
+    padding:32px;
+    font-size: 24px;
+    text-align: center;
+}
