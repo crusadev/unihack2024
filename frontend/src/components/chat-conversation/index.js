@@ -2,8 +2,9 @@ import { useEffect, useRef } from "react";
 import "./index.css"
 
 const ChatConversation = ({messages}) => {  
-    const last_ref = useRef(null);
+    const messages_ref = useRef(null);
     useEffect(() => {
+        messages_ref.current?.lastElementChild?.scrollIntoView({behavior:"smooth"})
     },[messages]) 
     return (
         <div className="chat-conversation-container">
@@ -12,6 +13,7 @@ const ChatConversation = ({messages}) => {
             :
             <>
                 <div className="degrading-text"></div>
+                <div ref={messages_ref}>
                 {messages.map((message,index) => (
                     <div className="message-couple" key={index}>
                         <div className="message-sent-container">
@@ -26,6 +28,7 @@ const ChatConversation = ({messages}) => {
                         </div>
                     </div>
                 ))}
+                </div>
             </>
             }
         </div>

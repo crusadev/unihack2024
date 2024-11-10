@@ -3,9 +3,10 @@ import useConvContext from "../../react-logic/hooks/useConvContext"
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import PaginationContainer from "../../components/pagination-container";
 
 const ChatsList = () => {
-    const {conversations,isLoading} = useConvContext();
+    const {conversations,isLoading,currentPage,setCurrentPage,maxPages} = useConvContext();
     return (
         <div className="access-chat-container">
             <div className="acess-chat-headers-container">
@@ -29,6 +30,7 @@ const ChatsList = () => {
             )}
         )}
             <Link to="/home/chat/new" className="access-chat-add access-chat-data" >Incepe o noua conversatie<span className="add-plus">+</span></Link>
+            <PaginationContainer pageState={{currentPage,setCurrentPage,maxPages}} />
         </div>
     )
 }

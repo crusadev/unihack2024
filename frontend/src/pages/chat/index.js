@@ -11,11 +11,13 @@ import axios from "axios";
 const ChatScreen = () => {
     const {conversation_id} = useParams();
     const {dispatch} = useMessagesContext();
-    
     useEffect(() => {
         (async () => {
-            const result = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/conversations/get_one/${conversation_id}`);
-            dispatch({type:"SET_MESSAGES",payload:result.data.messages});
+            if(conversation_id != "new"){
+                const result = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/conversations/get_one/${conversation_id}`);
+                console.log(result.data)
+                dispatch({type:"SET_MESSAGES",payload:result.data.messages});
+            }
         })()
     },[conversation_id])
 
@@ -23,10 +25,11 @@ const ChatScreen = () => {
     return (
         <>
         <div className="chat-screen">
-            {messages ?
-            <ChatConversation messages={messages}/>
-            :
-            null
+            {
+                conversation_id == "new" ? 
+                <ChatConversation messages={null}/>
+                :
+                <ChatConversation messages={messages}/>
             }
             <Prompt />
         </div>

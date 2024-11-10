@@ -24,7 +24,7 @@ const Profile = () => {
             ))}
         </div>
         <div className="profile-buttons-container">
-            <div className="back-button" onClick={() => navigate("/home/chat")}>Back</div>
+            <div className="back-button" onClick={() => navigate("/home/chatlist")}>Back</div>
             <div className="logout-button" onClick={() => logout()}>Logout</div>
         </div>
         </>

@@ -1,0 +1,26 @@
+.filesystem-page{
+    height:100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+.filesystem-container{
+    margin-top:64px;
+    flex-grow: 1;
+}
+.file-container{
+    padding:12px 24px;
+    color:white;
+    cursor:pointer;
+    flex-grow: 1;
+}
+.file-container:nth-child(odd){
+    background-color: #171717;
+}
+.file-container:nth-child(even){
+    background-color: #212121;
+}
+.file-container:hover{
+    padding-left:32px
+}
