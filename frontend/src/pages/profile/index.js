@@ -9,6 +9,7 @@ const Profile = () => {
     const {user} = useAuthContext();
     const {logout} = useLogout();
     const navigate = useNavigate();
+    console.log(user)
     return (
         <>
         <h3 className="screen-header">Profile Info</h3>

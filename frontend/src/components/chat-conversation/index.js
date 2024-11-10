@@ -23,7 +23,7 @@ const ChatConversation = ({messages}) => {
                         </div>
                         <div className="message-received-container">
                             <div className="message-received">
-                                {message.response}
+                                {message.response && message.response}
                             </div>
                         </div>
                     </div>

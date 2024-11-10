@@ -1,4 +1,5 @@
-const Conversation = require("../model/Conversation")
+const Conversation = require("../model/Conversation");
+const axios = require("axios")
 
 const getConversation = async (req,res) => {
     try{
@@ -42,8 +43,9 @@ const postConversation = async (req,res) => {
         //const response = axios... comunicare cu AI pentru a primi raspuns
         const {client_id,prompt} = req.body
         console.log(client_id, prompt)
-        const ai_response = "Some random responses for now, until we integrate!!";
-        const response_files_url = ["https://docs.google.com/document/d/1H9U6jP_0TpmcVwpARHth5x8qZd-Wq8HZ7J2CbpcnPdc/edit?tab=t.0"]
+        const ai_response = await axios.post(`${process.env.AI_URL}/prompt`,{
+            prompt
+        })
         const newConversation = new Conversation({
             client_id,
             messages:[{
@@ -51,9 +53,7 @@ const postConversation = async (req,res) => {
                 prompt:req.body.prompt,
                 //files:req.body.files
                 //response:response.data...
-                response:ai_response,
-                //response_files_url:response.data....
-                response_files_url
+                response:ai_response.data,
             }],
             last_message:{
                 text:req.body.prompt,
@@ -65,6 +65,7 @@ const postConversation = async (req,res) => {
         console.log(testing)
         res.status(200).json(savedConversation)
     }catch(err){
+        console.log(err.message)
         res.status(400).json(err.message)
     }
 }
@@ -73,20 +74,18 @@ const postMessage = async (req,res) => {
     try{
         //De adaugat fisiere, de adaugat response
         const {conversation_id} = req.params;
+        const {prompt} = req.body
         //const response = axios... comunicare cu AI pentru a primi raspuns
-        const ai_response = "Some random responses for now, until we integrate!!";
-        console.log(req.body.prompt)
-        const response_files_url = ["https://docs.google.com/document/d/1H9U6jP_0TpmcVwpARHth5x8qZd-Wq8HZ7J2CbpcnPdc/edit?tab=t.0"]
+        const ai_response = await axios.post(`${process.env.AI_URL}/prompt`,{
+            prompt
+        })
         const new_message = {
             sent_date: new Date(),
             prompt:req.body.prompt,
             //files:req.body.files
             //response:response.data...
-            response:ai_response,
-            //response_files_url:response.data....
-            response_files_url
+            response:ai_response.data,
         }
-        console.log(new_message)
         await Conversation.findByIdAndUpdate(conversation_id,{
             $push:{
                 messages:new_message
@@ -102,6 +101,7 @@ const postMessage = async (req,res) => {
         console.log("last_message")
         res.status(200).json(new_message)
     }catch(err){
+        console.log(err.message)
         res.status(500).json(err.message)
     }
 }

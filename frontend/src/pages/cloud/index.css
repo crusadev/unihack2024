@@ -9,11 +9,19 @@
     margin-top:64px;
     flex-grow: 1;
 }
+.filesystem-loading:hover{
+    padding-left:24px !important;
+    cursor:auto
+}
 .file-container{
     padding:12px 24px;
     color:white;
     cursor:pointer;
     flex-grow: 1;
+}
+.file-headers:hover{
+    padding-left:24px !important;
+    cursor:auto
 }
 .file-container:nth-child(odd){
     background-color: #171717;
@@ -23,4 +31,8 @@
 }
 .file-container:hover{
     padding-left:32px
+}
+.file-icon{
+    font-size: 18px;
+    padding-right: 6px;
 }

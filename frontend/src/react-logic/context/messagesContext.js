@@ -16,6 +16,7 @@ export const MessagesReducer = (state,action) => {
                     ...state.messages,
                     {
                         ...action.payload,
+                        response:"Loading...",
                         unsolved:true,
                     }
                 ]

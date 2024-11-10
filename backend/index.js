@@ -10,7 +10,7 @@ app.use(cors());
 
 app.listen(process.env.PORT,() => {
     console.log("Server Started");
-    mongoose.connect("mongodb://localhost:27017")
+    mongoose.connect(process.env.DB_URL)
     .then(() => {
         console.log("Connected to database")
     })
