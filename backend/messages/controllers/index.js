@@ -15,9 +15,10 @@ const getAllUserConversations = async (req,res) => {
         const {client_id} = req.params
         const {page} = req.query || 0;
         const convPerPage = 6;
-        const conversations = await Conversation.find({client_id:client_id}).skip(page*convPerPage).limit(convPerPage).select("last_message createdAt");
-        console.log("user conversations: " + conversations)
-        res.status(200).json(conversations);
+        const conversations = await Conversation.find({client_id:client_id}).sort({createdAt:-1}).skip(page*convPerPage).limit(convPerPage).select("last_message createdAt");
+        const number = await Conversation.find({client_id}).countDocuments()
+        console.log(number)
+        res.status(200).json({conversations,number});
     }catch(err){
         res.status(500).json(err.message)
     }
@@ -54,9 +55,14 @@ const postConversation = async (req,res) => {
                 //response_files_url:response.data....
                 response_files_url
             }],
-            last_message:req.body.prompt,
+            last_message:{
+                text:req.body.prompt,
+                sent_date:new Date()
+            }
         })
         const savedConversation = await newConversation.save();
+        const testing = await Conversation.findById(savedConversation._id)
+        console.log(testing)
         res.status(200).json(savedConversation)
     }catch(err){
         res.status(400).json(err.message)

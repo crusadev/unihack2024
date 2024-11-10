@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "graphrag-441108",
+  "private_key_id": "da31089528bf48a6b9f5d79df0131abfc77879f5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCtxHXU5bKDL0ql\nxiu4X0Wn94R01TSbPikyZXQT5a5yTYVGiWAIhMA7Sd0tHmvRFzxjmdaVP8rE1LLD\n3qVYfMSi4uKzBZT9V3etlAIE4mJQU4RREJHhZgB03C4kTLONpRZQC8YXGTMERoUS\nLeJN0hqbkefSw2Mt9EMl0y0Dtq/NIq5xtE5AzINHhpkkH9YniLZsl7khJNl2OMEd\n6XT33BhoMKvGYIIhaFwe7jNGnzFVloOUJXQWMqCTd7w5M/ZIVKUWDrWmfSAxyu34\nGSiCMXkLOhTdSyUQ4rzxkEYCQ5htFUC4wOggGJL2FL8eG5VIznaaXBM6h8BYgK1q\nQiLLhSfjAgMBAAECggEAFrT5gNyTOzlO0+LVi75HZ++cS3gg67hvwbooNQFqjl06\n8UC6X+KZDCZW1LKI/EXBCnLr64zuflIdGiNaD/od5/smDKbKFWD8rp4MtX6vwjdn\nrwAvT/j4Tk0Hao7rV7Me+07Oj+4nEIP2l62PSQQPngyu8oe9yh+FNsgltbqFtpR+\nSMhlwbtCut2G5Ca37Tq6WQqteFzl9oBeOfrcWJPHKdseo3SMCWJIyo0SkKX4Xeqz\nYhvVcv5oxRsb/njAdh9YMsLRd0eR3h80lPpeqWZFfo4TGz6JHvcttTt5EvR7a7of\ndlwjwywmTv/8THFkc+wszku/t1Q7jquQbHbYgmmzoQKBgQDmYBt5uctaSpjpc0CJ\nlVA+kEACBiNYRwOAPURCh0ss/xUL9PxegVA2P1xOqJWDDYxlEI/l4FwnKgT40qA8\nTixttiHyO2MzxrOkeOGQ2zKjYXwunuc6siiG6uAKoPlEtil6z5ZnsekmlWYzNXIu\nwnfvKCraCQRzEKS93zn0mpe4vQKBgQDBGHOv/qn6xTN2fHPNls3xlxSuSTVyu/39\nfT/4laERvmmwXHnL7DD0G2s9DEQAMMBOMscwvcsfRTjbvurON9x1fQKEs2kLdL58\nMHOgoILA8+NlEYCZ+VKknco6takTQohvNTmBDH+69fTf9DWhMch1MpB19nJbLwPH\nmxOCsI/9HwKBgGaMf46G8wuFS14X7LGR4r+GzMdZ3h/stJVAMIOA4Cjuf3rsGe8j\nlwYe3EMzbiKBRG60mamVXtAcN0xfze4qSkKoIaJHZ1hj6hGbsaUevgLWYUYLfBi3\nt6yfHw38LBm3EO3XPDd6jbOcK3s+Hk7MSEEQW0rlWrKxxPO0S4Mj0cftAoGBAJ2a\nippEXpK6sEVuUMql4tPkP1H9mO1buXRT7YnE/yFPbE4xPIwP7OjhFEdQopQRNnTd\nBy2mS4rrYfwhuN62Q291qD+NfBiIog0VMtsRB4fbyGcuwOtrz2NjErOWoDiDHn6+\nT4AgJoT/yW2dksRNsNLPgY92pmH8XrZlwafy2qN7AoGABI8dy6nV+mNAI2tVS8EC\nZgC0jFbbM3ZubJGTVNlF3C+GSkMwftYxZB0pV17KGz8p3muPOwocAzaOEXYajvWQ\n98/8eRK5WVfrGVN6pulVI90p5ogSp//I1F5WlmKVtSIgvSX649usOhpGwcSwVBfv\nr9LABW/fFdT8pMXRZWtD1+4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-cloud-unihack@graphrag-441108.iam.gserviceaccount.com",
+  "client_id": "113868882537015243775",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-cloud-unihack%40graphrag-441108.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
